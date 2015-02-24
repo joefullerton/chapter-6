@@ -12,13 +12,16 @@ public class IntegerList
 
 {
   int[] list; // values in the list
-
+  int newsize;
+  int[] newList;
+  int numElem = 0;
   // -------------------------------------------------------
   // create a list of the given size
   // -------------------------------------------------------
   public IntegerList(int size)
   {
     list = new int[size];
+    numElem = size;
   }
 
   // -------------------------------------------------------
@@ -28,6 +31,48 @@ public class IntegerList
   {
     for (int i = 0; i < list.length; i++)
       list[i] = (int) (Math.random() * 100) + 1;
+  }
+  
+  
+  
+  public void increaseSize()
+  {
+    newList = new int[list.length*2];
+    for (int i = 0; i < list.length; i++)
+    {
+      newList[i] = list[i];
+    }
+    list = newList;
+  }
+  
+  
+  public void addElement(int newVal)
+  {
+    if (list[list.length - 1] > 0)
+    {
+    increaseSize();
+    }
+    for(int i = 0; i < list.length; i++)
+    {
+        if (list[i] <1)
+        {
+        list[i] = newVal;
+        i = list.length + 1;
+        }
+    }
+   // list[numElem+1] = newVal;
+    //numElem++;
+    
+  }
+  
+  public void removeFirst(int newVal)
+  {
+	  
+  }
+  
+  public void removeAll(int newVal)
+  {
+	  
   }
 
   // -------------------------------------------------------

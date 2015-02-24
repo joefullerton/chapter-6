@@ -79,6 +79,21 @@ public class IntegerListTest
       list.binarySearchD(target);
       System.out.println(list.binarySearchD(target));
       break;
+    case 7:
+      System.out.println("Enter New Item Value");
+      newVal = scan.nextInt();
+      list.addElement(newVal);
+      break;
+   /* case 8:
+      System.out.println("Remove first occurance of a value?");
+      newVal = scan.nextInt();
+      list.removeFirst(newVal);
+      break;*/
+   /* case 9:
+      System.out.println("Remove all occurances of a value?");
+      newVal = scan.nextInt();
+      list.removeAll(newVal);
+      break;*/
     }
   }
 
@@ -96,6 +111,7 @@ public class IntegerListTest
     System.out.println("4: Replace All");
     System.out.println("5: Reverse Order");
     System.out.println("6: Binary search");
+    System.out.println("7: Add Another Element");
     System.out.print("\nEnter your choice: ");
   }
 
